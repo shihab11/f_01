@@ -1,0 +1,48 @@
+
+package firstProject;
+import javax.swing.*;
+import javax.swing.JOptionPane; //pop up a standard dialog box that prompts users for a value or informs them of something
+public class Project0 {
+    //Main method
+    public static void main(String[] args) {
+
+
+
+
+        // using while loop
+        while(true) {
+            // asking user string
+            String sentence = JOptionPane.showInputDialog(null, " Please enter a  sentence");
+            // checking sentence
+            if (!sentence.toUpperCase().contentEquals("STOP")) {
+                // declaring variable to count E
+                int up_E = 0;
+                // declaring variable to count e
+                int low_e = 0;
+                // using for loop
+                for (int i = 0; i < sentence.length(); i++) {
+                    // checking character
+                    if (sentence.charAt(i) == 'E') {
+                        // when character from array is E then
+                        up_E++;
+                    }
+                    // checking character
+                    if (sentence.charAt(i) == 'e') {
+                        // when character from array is e then
+                        low_e++;
+                    }
+                }
+                JOptionPane.showMessageDialog(null, "Number of uppercase 'E': " + up_E + "\n Number of lowercase 'e' : " + low_e);
+            } else
+            {
+                break;
+            }
+
+        }
+        }
+}
+
+
+
+
+
